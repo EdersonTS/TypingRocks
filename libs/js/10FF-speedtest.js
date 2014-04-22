@@ -1,19 +1,19 @@
-var word_string, words; 		//String = enthält die Wörter; Array(words) = enthält die Wörter aufgesplittet in einem Array
-var row1_string = ''; 			//enthält die einzugebenen Wörter der 1. Reihe
+var word_string, words;         //String = enthält die Wörter; Array(words) = enthält die Wörter aufgesplittet in einem Array
+var row1_string = '';           //enthält die einzugebenen Wörter der 1. Reihe
 var i;
-var word_pointer = 0; 			//markiert das aktuelle Wort welches getippt werden soll
-var user_input_stream = ''; 	//sammelt alle Tastatureingaben des Users
-var countdown; 					//zeigt die Zeit an und wird runtergezählt
-var row_counter = 0; 			//zählt die Anzahl der Zeilensprünge
-var eingabe; 					//prüfvariable => alles was im Inputfeld drinsteht wird hier zwischengespeichert und weiterverarbeitet (manchmal reagiert der Keylistener für das Leerzeichen nicht schnell genug, z.b. "hallo w" wird dann übertragen, daher erfolgt zu erst eine weiterverarbeitung) 
-var start_time = 0;				//die Startzeit in Millisekunden
-var end_time = 0;				//die Endzeit in Millisekunden
-var setval = "";				//die Variable für den Timer/setInterval
-var start_time_set = 0;			//wurde die Startzeit auf dem Server mittels Ajax schon gesetzt oder nicht
-var line_height = 0;			//Höhe des Zeilensprungs
+var word_pointer = 0;           //markiert das aktuelle Wort welches getippt werden soll
+var user_input_stream = '';     //sammelt alle Tastatureingaben des Users
+var countdown;                  //zeigt die Zeit an und wird runtergezählt
+var row_counter = 0;            //zählt die Anzahl der Zeilensprünge
+var eingabe;                    //prüfvariable => alles was im Inputfeld drinsteht wird hier zwischengespeichert und weiterverarbeitet (manchmal reagiert der Keylistener für das Leerzeichen nicht schnell genug, z.b. "hallo w" wird dann übertragen, daher erfolgt zu erst eine weiterverarbeitung) 
+var start_time = 0;             //die Startzeit in Millisekunden
+var end_time = 0;               //die Endzeit in Millisekunden
+var setval = "";                //die Variable für den Timer/setInterval
+var start_time_set = 0;         //wurde die Startzeit auf dem Server mittels Ajax schon gesetzt oder nicht
+var line_height = 0;            //Höhe des Zeilensprungs
 var loading = 0;
 
-var error_wpm = 0;				//fallback if ajax call fails => user can still see his result
+var error_wpm = 0;              //fallback if ajax call fails => user can still see his result
 var error_keystrokes = 0;
 var error_correct = 0;
 var error_wrong = 0;
@@ -22,7 +22,7 @@ var backspace_counter = 0;
 var _gaq = _gaq || [];
 var test_ausgefuehrt = 0;
 
-var keys = {};					//liest die gedrückten Tasten ein, wird genutzt für Mac/Safari "Smart" Reload
+var keys = {};                  //liest die gedrückten Tasten ein, wird genutzt für Mac/Safari "Smart" Reload
 
 var input_key_value = $("#config_input_key").attr("value");
 var $inputfield = $("input#inputfield");
@@ -99,31 +99,31 @@ function restart() {
 	$("#timer").removeClass("off");
 	
 	window.clearInterval(setval);
-    setval = "";
-    
+	setval = "";
+	
 	$.ajax({
 		type: 'POST',
-  		url: myBaseUrl + '/speedtests/get_words',
-  		data: "speedtest_mode="+$("#speedtest_mode").attr("value"),
-  		cache: false,
-  		success: function(data){
-  			setTimeout(function() { 
-  				$("#ajax-load").css('display', 'none');
-	    		$("#reload-box").css('display', 'block');
-	    		$("#wordlist").text(data);
-	    		
-	    		word_string = $('#wordlist').text();
-	    		//console.log(data);
+		url: myBaseUrl + '/speedtests/get_words',
+		data: "speedtest_mode="+$("#speedtest_mode").attr("value"),
+		cache: false,
+		success: function(data){
+			setTimeout(function() { 
+				$("#ajax-load").css('display', 'none');
+				$("#reload-box").css('display', 'block');
+				$("#wordlist").text(data);
+				
+				word_string = $('#wordlist').text();
+				//console.log(data);
 				words = word_string.split("|");
 				
 				fill_line_switcher();
 
-				//initialisiere wichtige Startwerte die abhängig von der Textgröße ist				
+				//initialisiere wichtige Startwerte die abhängig von der Textgröße ist              
 				p = $('#row1 span[wordnr="'+word_pointer+'"]').position();
 				
 				previous_position_top = 0;
 				
-				line_height = parseInt($('#row1 span[wordnr="'+word_pointer+'"]').css('line-height'));			
+				line_height = parseInt($('#row1 span[wordnr="'+word_pointer+'"]').css('line-height'));          
 								
 				//springe ins InputField
 				$inputfield.val('');
@@ -140,8 +140,8 @@ function restart() {
 				loading = 0;
 				
 			}, 200);
-  		},
-  		error:function(httpRequest, textStatus, errorThrown) { 
+		},
+		error:function(httpRequest, textStatus, errorThrown) { 
 			//restart();
 		}
 	});
@@ -154,7 +154,7 @@ function activate_keylistener() {
 	// Android/mobile specific function to check if inputfield contains a space-char, as the keyup function doesn't work on Android+Chrome 
 	$(window).on("touchstart", function(event) {
 		$("input#inputfield").on("input", function( event ) {
-			var value = $("input#inputfield").val();	
+			var value = $("input#inputfield").val();    
 			
 			if (value.indexOf(" ") != -1) {
 				android_spacebar = 1;
@@ -196,56 +196,56 @@ function activate_keylistener() {
 		else if (event.which == input_key_value && loading == 0 || android_spacebar == 1) { //event.which == 32 => SPACE-Taste
 			
 			//evaluate
-     		var eingabe = $inputfield.val().split(" ");
-     		user_input_stream += eingabe[0]+" ";
+			var eingabe = $inputfield.val().split(" ");
+			user_input_stream += eingabe[0]+" ";
 			
 			$row1_span_wordnr.removeClass('highlight-wrong');
 			
-     		if(eingabe[0] == words[word_pointer])
-     		{
-     			$row1_span_wordnr.removeClass('highlight').addClass('correct');
-     			error_correct++;
-     			error_keystrokes += words[word_pointer].length;
-     			error_keystrokes++; //für jedes SPACE
-     		}	
-     		else
-     		{
-     			$row1_span_wordnr.removeClass('highlight').addClass('wrong');
-     			error_wrong++;
-     			error_keystrokes -= Math.round(words[word_pointer].length / 2);
-     		}	
-     		
-     		//process
-     		word_pointer++;
-     		$row1_span_wordnr = $('#row1 span[wordnr="'+word_pointer+'"]');
-     		
+			if(eingabe[0] == words[word_pointer])
+			{
+				$row1_span_wordnr.removeClass('highlight').addClass('correct');
+				error_correct++;
+				error_keystrokes += words[word_pointer].length;
+				error_keystrokes++; //für jedes SPACE
+			}   
+			else
+			{
+				$row1_span_wordnr.removeClass('highlight').addClass('wrong');
+				error_wrong++;
+				error_keystrokes -= Math.round(words[word_pointer].length / 2);
+			}   
+			
+			//process
+			word_pointer++;
+			$row1_span_wordnr = $('#row1 span[wordnr="'+word_pointer+'"]');
+			
 			$row1_span_wordnr.addClass('highlight');
-     		
-     		p = $row1_span_wordnr.position();
-     	
-     		//console.log(p.top+"\n");
-     		
-     		if(p.top > previous_position_top + 10) //"+ 5 ist die Toleranz, damit der Zeilensprung auch funktioniert, wenn User die Schriftart größer gestellt hat, etc."
-     		{
-     			row_counter++;
-     			previous_position_top = p.top;
-     			
-     			var zeilensprung_hoehe = (-1 * line_height) * row_counter;
-     			$row1.css('top', zeilensprung_hoehe+"px"); //bei einem zeilensprung wird der text um "line_height" verschoben 
-     			$row1_span_wordnr.addClass('highlight');
-     		}
-     		
-     		//erase
-     		$("#inputstream").text(user_input_stream);
-     		$inputfield.val(eingabe[1]);
-   		} else {
-   			//prüfe ob user das wort gerade falsch schreibt (dann zeige es rot an, damit user direkt korrigieren kann)
+			
+			p = $row1_span_wordnr.position();
+		
+			//console.log(p.top+"\n");
+			
+			if(p.top > previous_position_top + 10) //"+ 5 ist die Toleranz, damit der Zeilensprung auch funktioniert, wenn User die Schriftart größer gestellt hat, etc."
+			{
+				row_counter++;
+				previous_position_top = p.top;
+				
+				var zeilensprung_hoehe = (-1 * line_height) * row_counter;
+				$row1.css('top', zeilensprung_hoehe+"px"); //bei einem zeilensprung wird der text um "line_height" verschoben 
+				$row1_span_wordnr.addClass('highlight');
+			}
+			
+			//erase
+			$("#inputstream").text(user_input_stream);
+			$inputfield.val(eingabe[1]);
+		} else {
+			//prüfe ob user das wort gerade falsch schreibt (dann zeige es rot an, damit user direkt korrigieren kann)
 			if($inputfield.val().replace(/\s/g, '') == words[word_pointer].substr(0, $inputfield.val().length))
 				$row1_span_wordnr.removeClass('highlight-wrong').addClass('highlight');
 			else
-				$row1_span_wordnr.removeClass('highlight').addClass('highlight-wrong');	
-   		}
-   		
+				$row1_span_wordnr.removeClass('highlight').addClass('highlight-wrong'); 
+		}
+		
 	});
 }
 
@@ -274,7 +274,7 @@ function count_down() {
 	
 	$("#timer").text(first_part+":"+second_part);
 	
-  	if(countdown > 9)
+	if(countdown > 9)
 	{
 		$("#timer").text("0:"+countdown);
 	} else if(countdown > 0){
@@ -288,7 +288,7 @@ function count_down() {
 		$("#words").fadeOut();
 		
 		window.clearInterval(setval);
-        setval = "";
+		setval = "";
 		
 		end_time = get_current_time().toString(16);
 		
@@ -298,51 +298,51 @@ function count_down() {
 		
 		$.ajax({
 			type: 'POST',
-	  		url: myBaseUrl + '/speedtests/auswertung',
-	  		cache: false,
-	  		dataType: 'json',
-	  		data: send_data,
-	  		success: function(data){
-	  			$("#result-load-indicator").hide();
-	  			$("#auswertung-result").html(data['result']);
-	    		$("#auswertung-result").show();
-	    		
-	    		
-	    		$("#badge-box").html(data['badge']);
-	    		$("#badge-box").show();
-	    		
-	    		$("#advertisement").css("width", "1400px");
-	    		$("#ads-speedtest-view-container").css("width", "");
-	    		
-	    		//check & load new notifications, 5 seconds after test to check for  
-	    		//and 70 seconds after test => achievements are processed every minute, so it has to be one minute later
-	    		
-	    		/*
-	    		setTimeout(function() { load_notifications() }, 5000);
-	    		setTimeout(function() { load_notifications() }, 70000);
-	    		*/
-	    		
-	    		//hides the secondary main-ad and resizes the "main-ad-box" to fit on the right side next to "result" & "share"
+			url: myBaseUrl + '/speedtests/auswertung',
+			cache: false,
+			dataType: 'json',
+			data: send_data,
+			success: function(data){
+				$("#result-load-indicator").hide();
+				$("#auswertung-result").html(data['result']);
+				$("#auswertung-result").show();
+				
+				
+				$("#badge-box").html(data['badge']);
+				$("#badge-box").show();
+				
+				$("#advertisement").css("width", "1400px");
+				$("#ads-speedtest-view-container").css("width", "");
+				
+				//check & load new notifications, 5 seconds after test to check for  
+				//and 70 seconds after test => achievements are processed every minute, so it has to be one minute later
+				
+				/*
+				setTimeout(function() { load_notifications() }, 5000);
+				setTimeout(function() { load_notifications() }, 70000);
+				*/
+				
+				//hides the secondary main-ad and resizes the "main-ad-box" to fit on the right side next to "result" & "share"
 				//$("#ad-main-secondary").hide();
-	    		$("#ad-main").css('margin', 'none');
-	    		$("#ad-main").css('float', 'left');
-	    		$("#ad-main-secondary").css('float', 'left');
-	  		},
-	  		error: function(xhr, textStatus, errorThrown) {
-	            console.log(xhr);
-	            console.log(textStatus);
-	            console.log(errorThrown);
-	            
-	            error_wpm = Math.round(error_keystrokes / 5);
-	        	$("#error-box #wpm").text(error_wpm);
-	        	$("#error-box #keystrokes").text(error_keystrokes);
-	        	$("#error-box #correct-words").text(error_correct);
-	        	$("#error-box #wrong-words").text(error_wrong);
-	    		
-	    		$("#error-box").show();
-	    	}
+				$("#ad-main").css('margin', 'none');
+				$("#ad-main").css('float', 'left');
+				$("#ad-main-secondary").css('float', 'left');
+			},
+			error: function(xhr, textStatus, errorThrown) {
+				console.log(xhr);
+				console.log(textStatus);
+				console.log(errorThrown);
+				
+				error_wpm = Math.round(error_keystrokes / 5);
+				$("#error-box #wpm").text(error_wpm);
+				$("#error-box #keystrokes").text(error_keystrokes);
+				$("#error-box #correct-words").text(error_correct);
+				$("#error-box #wrong-words").text(error_wrong);
+				
+				$("#error-box").show();
+			}
 		});
-	}	
+	}   
 }
 
 function get_current_time() {
