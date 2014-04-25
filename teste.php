@@ -2,7 +2,7 @@
 
 include 'funcoes.php';
 include 'palavras.php';
- 
+
 // guarda as palavras
 $palavras = array(
   'chaves' => array(), // chaves para aferir
@@ -10,7 +10,7 @@ $palavras = array(
   'imagem' => array()  // texto modo imagem pará usuário
 );
 
-for ($__i = 0; $__i < 30; $__i++) { 
+for ($__i = 0; $__i < 30; $__i++) {
   // escolhe uma palavra do dicionário disponível
   $__palavra  = $__PALAVRAS__[rand(0, $__TOTAL__)];
 
@@ -25,10 +25,7 @@ for ($__i = 0; $__i < 30; $__i++) {
 }
 
 session_start();
-$_SESSION['palavras'] = array(
-  'chaves' => $palavras['chaves'],
-  'texto'  => $palavras['texto'],
-);
+$_SESSION['palavras'] = array_combine($palavras['chaves'], $palavras['texto']);
 session_commit();
 
 

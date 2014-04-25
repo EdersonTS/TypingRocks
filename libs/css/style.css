@@ -1,3 +1,6 @@
+.bloco {display: inline-block;}
+.bloco {*display: inline;}
+
 .frase,
 .digitar {
   width:980px;
@@ -7,7 +10,7 @@
   font-family: monospace;
 }
 .frase {
-  height: 51px;
+  height: 66px;
   line-height: 25px;
   font-size:18px;
   overflow: hidden;
@@ -18,18 +21,31 @@
   border-radius: 10px;
 }
   .frase span {
-    background: url('../imgs/fundo.png') no-repeat -300px 50%;
-    padding: 2px 5px; 
+    padding: 2px;
+    margin: 1px 2.5px;
+    border-radius: 5px;
   }
   .frase span.digitando {
+    box-shadow: 0 0 3px #000 inset;
     background-color: #444;
   }
+  .frase span.green {
+    background-color: #060;
+  }
+  .frase span.red {
+    background-color: #600;
+  }
     .frase span img {
-      vertical-align: middle;
+      vertical-align: top;
+      background: transparent url('../imgs/fundo.png') no-repeat -300px 50%;
     }
 
 .digitar {
   border: 1px solid #09F;
   border-radius:10px;
   font-size:16px;
+  outline: none;
+}
+.digitar:focus {
+  box-shadow: 0 0 5px #00f;
 }

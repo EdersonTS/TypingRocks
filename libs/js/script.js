@@ -6,9 +6,10 @@ function monta_frase() {
 	for(var _I = 0; _I < __TOTAL__; _I++) {
 		var img  = document.createElement('img');
 		img.src = __PALAVRAS__[_I];
-		img.id  = __CHAVES__[_I];
 
 		var span = document.createElement('span');
+		span.id        = __CHAVES__[_I];
+		span.className = 'bloco';
 
 		span.appendChild(img);
 		frase.appendChild(span);
@@ -18,109 +19,151 @@ function monta_frase() {
 	}
 }
 
+var palavra  = '';
 var palavras = [];
 var total    = __TOTAL__;
-var atual    = 0;
-var palavra  = '';
-var limpeza  = false;
 var digitar  = $('#digitar');
-var charcode = $('#charcode');
+var counter  = {
+	backspace : 0,
+	error     : 0,
+	word      : 0,
+	char      : 0,
+};
 
-var keycodes = [
-	17,  // ctrl
-	18,  // alt
-	19,  // pause
-	20,  // caps-lock
-	27,  // esc
-	33,  // page-up
-	34,  // page-down
-	35,  // end
-	36,  // home
-	45,  // insert
-	46,  // del
-	93,  // context-menu
-	225, // altgr
-	8,   // backspace
-	9,   // tab
-	0,   // 
-];
+
+var keys = {
+	CTRL         : 17,  // ctrl
+	ALT          : 18,  // alt
+	PAUSE        : 19,  // pause
+	CAPSLOCK     : 20,  // caps-lock
+	ESC          : 27,  // esc
+	PAGEUP       : 33,  // page-up
+	PAGEDOWN     : 34,  // page-down
+	END          : 35,  // end
+	HOME         : 36,  // home
+	INSERT       : 45,  // insert
+	DEL          : 46,  // del
+	CONTEXT_MENU : 93,  // context-menu
+	ALTGR        : 225, // altgr
+	BACKSPACE    : 8,   // backspace
+	TAB          : 9    // tab
+};
 
 monta_frase();
 
-digitar.keydown(function(e) {
-	if (e.which == 32) {
-		marca_espaco();
-		conta_palavra();
-		marca_palavra_fim();
-		guarda_palavra(this.value);
-		// charcode.html(this.value + '|');
-	} else {
-		// set_background()
+
+
+digitar.keyup(function(event) {
+
+	var _this = this, $_this = $(this);
+
+
+	// [BACKSPACE] ---------------------
+	if( event.which == 8 ) {
+		counter.backspace++;
+
+		counter.char--;
+		set_background();
+	} else
+
+
+	// [SPACE] empty -------------------
+	if ( event.which == 32 && this.value == ' ' ) {
+
+		this.value = '';
+	} else 
+
+
+	// [SPACE] -------------------------
+	if ( event.which == 32 ) {
+
+		// save actual word position
+		var word_number = counter.word;
+
+		$.ajax({
+			type: 'POST',
+			url: 'get.php',
+			cache: false,
+			dataType: 'json',
+			data: {'id' : get_word().id, 'word' : _this.value.replace(/\s/g, '')},
+			success: function (data){
+				mark_as_correct_word( word_number, data.match )
+			},
+			error : function (data) {
+				console.log(data);
+			}
+		});
+
+		// next word
+		counter.word++;
+		counter.char = 0;
+
+		// clean typing area
+		clean(this);
+
+		// highlight next word
+		mark_next_word();
+	} else 
+
+
+	{
+		counter.char++
+
+		// typing tracking
+		set_background();
 	}
-});
-digitar.keypress(function(e) {
-	if (deve_limpar()) {
-		e.preventDefault();
-		limpar(this);
-	}
-});
-digitar.keyup(function(e) {
-	if (esta_limpo(this.value)) {
-		marca_palavra_ini();
-		console.log(e.which);
-		digitando();
-	}
+
 });
 
-function digitando() {
-	if (atual != 0)
-		$(palavras[atual - 1]).removeAttr( 'class' );
-		
-	$(palavras[atual]).toggleClass( 'digitando' );
+
+
+
+
+
+
+function mark_next_word() {
+
+	if (counter.word != 0) {
+		$(get_word(counter.word - 1)).removeClass( 'digitando' );
+		$(get_word(counter.word - 1).getElementsByTagName('img')[0]).removeAttr( 'style' );
+	}
+
+	$(get_word()).addClass( 'digitando' );
 }
-digitando();
+
+mark_next_word();
+
+
+function mark_as_correct_word( word_number, result ) {
+	$(get_word(word_number)).addClass( result ? 'green' : 'red' );
+}
+
+
+
+function get_word(position) {
+	position = Number(position);
+
+	if ( isNaN(position) || position < 0 ) {
+		position = counter.word;
+	}
+
+	return palavras[position];
+}
+
+
 
 function set_background() {
-	var _wrd = get_palavra_object(get_atual() + 1);
-	var _tt  = _wrd.innerHTML.length;
-	var _qt  = digitar.value.length + 1;
-	var _pc  = _qt/_tt*_wrd.offsetWidth;
-	_wrd.style.backgroundPosition =  - 300 + _pc + "px 50%";
+	(get_word().getElementsByTagName('img')[0]).style.backgroundPosition =  - 300 + (counter.char * 12) + "px 50%";
 }
 
-function conta_palavra() {
-	atual++;
+
+function clean() {
+	digitar[0].value = '';
 }
-function marca_espaco() {
-	espaco = true;
-}
-function e_espaco() {
-	return espaco;
-}
-function remove_espaco() {
-	espaco = false;
-}
-function marca_palavra_fim() {
-	limpeza = true;
-}
-function marca_palavra_ini() {
-	limpeza = false;
-}
-function deve_limpar() {
-	return limpeza;
-}
-function esta_limpo(str) {
-	return str.length == 0;
-}
-function limpar(input) {
-	input.value = '';
-}
-function guarda_palavra(str) {
-	palavra = str;
-}
+
 
 
 (function () {
-	digitar.value = '';
-	digitar.focus();
+	digitar[0].value = '';
+	digitar[0].focus();
 })();

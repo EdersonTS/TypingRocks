@@ -37,3 +37,15 @@ function gerarImagens($txt = "{ÉqtE") {
   return ob_get_clean();
 }
 
+
+
+function print_($value, $dump = FALSE) {
+  echo '<pre>';
+
+  if ( $dump === FALSE )
+    print_r($value);
+  else
+    var_dump($value);
+
+  echo '</pre>';
+}
