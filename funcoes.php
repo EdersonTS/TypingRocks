@@ -1,10 +1,16 @@
 <?php
 
+ini_set("display_errors", TRUE);
+
+error_reporting(E_ALL);
+
 date_default_timezone_set('America/Sao_Paulo');
 
 ini_set('default_charset', 'UTF-8');
 
 setlocale(LC_ALL, "pt_BR", "ptb");
+
+
 
 
 
