@@ -18,7 +18,7 @@ for ($__i = 0; $__i < 30; $__i++) {
   $palavras['chaves'][] = hash('adler32', rand(0, time()));
 
   // armazena palavra para aferir
-  $palavras['texto'][]  = $__palavra;
+  $palavras['texto'][]  = array('palavra' => $__palavra, 'valida' => NULL);
 
   // armazena imagem da palavra para usuário
   $palavras['imagem'][] = 'data:image/png;base64,' . base64_encode(gerarImagens($__palavra));
@@ -28,5 +28,5 @@ session_start();
 $_SESSION['palavras'] = array_combine($palavras['chaves'], $palavras['texto']);
 session_commit();
 
-
+// print_($_SESSION);exit;
 include 'html.php';

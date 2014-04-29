@@ -10,10 +10,12 @@
 </head>
 <body>
 
-	<div class="frase" id="frase"></div>
+	<div class="frase">
+		<div id="frase"></div>
+	</div>
 
 	<div><input type="text" class="digitar" id="digitar" /></div>
-	<div id="charcode">teste</div>
+	<div id="timer"></div>
 
 
 	<script type="text/javascript">

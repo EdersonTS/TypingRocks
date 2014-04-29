@@ -18,15 +18,23 @@
   background: #000;
   padding:2px 5px;
   text-align: justify;
-  border-radius: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #000;
 }
+  .frase #frase {
+    -webkit-transition: margin-top 350ms;
+       -moz-transition: margin-top 350ms;
+        -ms-transition: margin-top 350ms;
+         -o-transition: margin-top 350ms;
+            transition: margin-top 350ms;
+  }
   .frase span {
     padding: 2px;
     margin: 1px 2.5px;
-    border-radius: 5px;
+    border-radius: 3px;
   }
   .frase span.digitando {
-    box-shadow: 0 0 3px #000 inset;
+    box-shadow: 0 0 1px #000 inset;
     background-color: #444;
   }
   .frase span.green {
@@ -35,6 +43,10 @@
   .frase span.red {
     background-color: #600;
   }
+  .frase span.green,
+  .frase span.red {
+    opacity: 0.7;
+  }
     .frase span img {
       vertical-align: top;
       background: transparent url('../imgs/fundo.png') no-repeat -300px 50%;
@@ -42,7 +54,7 @@
 
 .digitar {
   border: 1px solid #09F;
-  border-radius:10px;
+  border-radius:5px;
   font-size:16px;
   outline: none;
 }

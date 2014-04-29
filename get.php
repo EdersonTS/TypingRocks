@@ -18,7 +18,8 @@ session_start();
 
 if ( array_key_exists($id, $_SESSION['palavras']) ) {
 
-  $return['match'] = $_SESSION['palavras'][$id] == $_POST['word'];
+  $return['match'] = $_SESSION['palavras'][$id]['palavra'] == $_POST['word'];
+  $_SESSION['palavras'][$id]['valida'] = $return['match'];
 
   echo json_encode($return);
 
