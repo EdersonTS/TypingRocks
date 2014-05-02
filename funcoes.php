@@ -1,4 +1,6 @@
 <?php
+phpinfo();
+exit;
 
 ini_set("display_errors", TRUE);
 
@@ -9,6 +11,10 @@ date_default_timezone_set('America/Sao_Paulo');
 ini_set('default_charset', 'UTF-8');
 
 setlocale(LC_ALL, "pt_BR", "ptb");
+
+if ( ! defined( '__DIR__' ) ) {
+  define( '__DIR__' , dirname( __FILE__ ) );
+}
 
 
 

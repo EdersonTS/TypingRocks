@@ -74,7 +74,7 @@ digitar.keyup(function(event) {
 
 		$.ajax({
 			type: 'POST',
-			url: 'get.php',
+			url: 'check.php',
 			cache: false,
 			dataType: 'json',
 			data: {'id' : get_word().id, 'word' : _this.value.replace(/\s/g, '')},

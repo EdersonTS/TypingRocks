@@ -3,26 +3,40 @@
 include 'funcoes.php';
 include 'palavras.php';
 
-$return = array('match' => FALSE);
+// guarda as palavras
+$palavras = array(
+  'chaves' => array(), // chaves para aferir
+  'texto'  => array(), // texto para aferir
+  'imagem' => array()  // texto modo imagem pará usuário
+);
 
-$id   = isset($_POST['id']) && strlen($_POST['id']) == 8 ? $_POST['id'] : FALSE;
-$word = isset($_POST['word']) ? $_POST['word'] : FALSE;
+for ($__i = 0; $__i < 30; $__i++) {
+  // escolhe uma palavra do dicionário disponível
+  $__palavra  = $__PALAVRAS__[rand(0, $__TOTAL__)];
 
+  // gera a chave
+  $palavras['chaves'][] = hash('adler32', rand(0, time()));
 
-if ( ! $id OR ! $word ) {
-  exit ('Nothing to do here!!');
+  // armazena palavra para aferir
+  $palavras['texto'][]  = array('palavra' => $__palavra, 'valida' => NULL);
+
+  // armazena imagem da palavra para usuário
+  $palavras['imagem'][] = 'data:image/png;base64,' . base64_encode(gerarImagens($__palavra));
 }
-
 
 session_start();
-
-if ( array_key_exists($id, $_SESSION['palavras']) ) {
-
-  $return['match'] = $_SESSION['palavras'][$id]['palavra'] == $_POST['word'];
-  $_SESSION['palavras'][$id]['valida'] = $return['match'];
-
-  echo json_encode($return);
-
-}
-
+$_SESSION['palavras'] = array_combine($palavras['chaves'], $palavras['texto']);
 session_commit();
+
+// $__palavras = array();
+// '__CHAVES__'   = $palavras['chaves'];
+// '__PALAVRAS__' = $palavras['imagem'];
+// '__TOTAL__'    = count($palavras['imagem']);
+
+echo json_encode(
+	array(
+		'__CHAVES__'   = $palavras['chaves'],
+		'__PALAVRAS__' = $palavras['imagem'],
+		'__TOTAL__'    = count($palavras['imagem']),
+	)
+);

@@ -10,80 +10,33 @@
 </head>
 <body>
 
-	<div class="frase" id="frase"></div>
-	<div><input type="text" class="digitar" id="digitar" /></div>
-	<div id="charcode"></div>
 
-<script type="text/javascript">
-var __PALAVRAS__ = [
-							'Lorem',
-							'ipsum',
-							'dolor',
-							'sit',
-							'amet',
-							'consectetur',
-							'adipisicing',
-							'elit',
-							'sed',
-							'do',
-							'eiusmodtempor',
-							'incididunt',
-							'ut',
-							'labore',
-							'et',
-							'dolore',
-							'magna',
-							'aliqua',
-							'Ut',
-							'enim',
-							'ad',
-							'minim',
-							'veniam',
-							'quis',
-							'nostrud',
-							'exercitation',
-							'ullamco',
-							'laboris',
-							'nisi',
-							'ut',
-							'aliquip',
-							'ex',
-							'ea',
-							'commodoconsequat',
-							'Duis',
-							'aute',
-							'irure',
-							'dolor',
-							'in',
-							'reprehenderit',
-							'in',
-							'voluptate',
-							'velit',
-							'essecillum',
-							'dolore',
-							'eu',
-							'fugiat',
-							'nulla',
-							'pariatur',
-							'Excepteur',
-							'sint',
-							'occaecat',
-							'cupidatat',
-							'nonproident',
-							'sunt',
-							'in',
-							'culpa',
-							'qui',
-							'officia',
-							'deserunt',
-							'mollit',
-							'anim',
-							'id',
-							'est',
-							'laborum'
-						];
+	<div class="frase"><div id="frase"></div></div>
+	<div class="">
+		<input type="text" class="digitar" id="digitar" />
+		<div id="timer"></div>
+	</div>
 
-</script>
+
+	<script type="text/javascript" src="./libs/js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript">
+	// <![CDATA[
+		$.ajax({
+			type: 'GET',
+			url: 'get.php',
+			cache: false,
+			dataType: 'json',
+			success: function (data){
+				console.log(data);
+			},
+			error : function (data) {
+				console.log('Error AJAX check.');
+				console.log(data);
+			}
+		});
+	// ]]>
+	</script>
 	<script type="text/javascript" src="./libs/js/script.js"></script>
+
 </body>
 </html>
