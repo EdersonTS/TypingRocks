@@ -4,7 +4,6 @@ var frase       = $('#frase');
 var digitar     = $('#digitar');
 var timer       = $('#timer');
 var palavras    = [];
-var total       = __TOTAL__;
 
 var is_loading  = false;
 var is_typing   = false;
@@ -172,12 +171,11 @@ function clean() {
 
 
 
-(function () {
+function init( data ) {
+	monta_frase( data );
 	digitar[0].value = '';
 	digitar[0].focus();
-
-	monta_frase();
-})();
+}
 
 
 
@@ -211,6 +209,8 @@ function result_calc() {
 
 		is_loading = true;
 
+		clear_words();
+
 		$.ajax({
 			type: 'POST',
 			url: 'result.php',
@@ -228,15 +228,15 @@ function result_calc() {
 	}
 }
 
-function monta_frase() {
+function monta_frase(__SERVER__) {
 	var wrd = [];
 
-	for(var _I = 0; _I < __TOTAL__; _I++) {
+	for(var _I = 0; _I < __SERVER__.total; _I++) {
 		var img  = document.createElement('img');
-		img.src = __PALAVRAS__[_I];
+		img.src = __SERVER__.palavras[_I];
 
 		var span = document.createElement('span');
-		span.id        = __CHAVES__[_I];
+		span.id        = __SERVER__.chaves[_I];
 		span.className = 'bloco';
 
 		span.appendChild(img);
@@ -245,4 +245,10 @@ function monta_frase() {
 
 		palavras.push(span)
 	}
+}
+
+function clear_words() {
+	frase.children().fadeOut( 750, function () {
+		$(this).remove();
+	});
 }
