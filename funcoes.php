@@ -1,6 +1,4 @@
 <?php
-phpinfo();
-exit;
 
 ini_set("display_errors", TRUE);
 

@@ -21,13 +21,14 @@
 	<script type="text/javascript" src="./libs/js/jquery-2.1.0.min.js"></script>
 	<script type="text/javascript">
 	// <![CDATA[
+		var __SERVER__ = {};
 		$.ajax({
 			type: 'GET',
 			url: 'get.php',
 			cache: false,
 			dataType: 'json',
 			success: function (data){
-				console.log(data);
+				init(data);
 			},
 			error : function (data) {
 				console.log('Error AJAX check.');

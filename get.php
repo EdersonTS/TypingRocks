@@ -35,8 +35,8 @@ session_commit();
 
 echo json_encode(
 	array(
-		'__CHAVES__'   = $palavras['chaves'],
-		'__PALAVRAS__' = $palavras['imagem'],
-		'__TOTAL__'    = count($palavras['imagem']),
+		'chaves'   => $palavras['chaves'],
+		'palavras' => $palavras['imagem'],
+		'total'    => count($palavras['imagem']),
 	)
 );
