@@ -2,4 +2,4 @@
 
 include 'funcoes.php';
 
-echo json_encode($_POST);
+print_($_POST);
