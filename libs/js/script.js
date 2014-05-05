@@ -40,8 +40,6 @@ digitar.keyup(function(event) {
 		clean(this);
 
 		return;
-
-		console.log( event.which )
 	}
 
 	typing_start();
@@ -51,7 +49,7 @@ digitar.keyup(function(event) {
 		counter.backspace++;
 
 		counter.char--;
-		// set_background();
+		set_background();
 	} else
 
 
@@ -81,7 +79,7 @@ digitar.keyup(function(event) {
 				mark_as_correct_word( word_number, data.match )
 			},
 			error : function (data) {
-				console.log('Error AJAX check.');
+				console.log('Error AJAX: check.php');
 				console.log(data);
 			}
 		});
@@ -105,7 +103,7 @@ digitar.keyup(function(event) {
 		counter.char++
 
 		// typing tracking
-		// set_background();
+		set_background();
 	}
 });
 
@@ -209,6 +207,8 @@ function result_calc() {
 
 		is_loading = true;
 
+		var __result = array_merge(counter, result);
+
 		clear_words();
 
 		$.ajax({
@@ -216,11 +216,12 @@ function result_calc() {
 			url: 'result.php',
 			cache: false,
 			dataType: 'json',
-			data: result,
+			data: __result,
 			success: function ( data ){
 				
 			},
 			error : function ( data ) {
+				console.log('Error AJAX: result.php');
 				console.log(data);
 			}
 		});
@@ -248,7 +249,17 @@ function monta_frase(__SERVER__) {
 }
 
 function clear_words() {
-	frase.children().fadeOut( 750, function () {
-		$(this).remove();
-	});
+	// frase.children().fadeOut( 750, function () {
+	// 	$(this).remove();
+	// });
+}
+
+function array_merge() {
+	var __array = {};
+	for (var _i = 0; _i < arguments.length; _i++) {
+		for ( var __i in arguments[_i] ) {
+			__array[__i] = arguments[_i][__i];
+		}
+	}
+	return __array;
 }
