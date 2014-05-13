@@ -8,7 +8,7 @@ var palavras    = [];
 var is_loading  = false;
 var is_typing   = false;
 
-var time_to_end = 10;
+var time_to_end = 60;
 var counter     = {
 	backspace : 0,
 	error     : 0,
