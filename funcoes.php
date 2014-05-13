@@ -53,3 +53,13 @@ function print_($value, $dump = FALSE) {
 
   echo '</pre>';
 }
+
+/**
+ * OUTPUT JSON object
+ * 
+ * @param Mixed $value
+ */
+function set_json($value) {
+  header('ContentType: text/plain');
+  echo json_encode($value);
+}

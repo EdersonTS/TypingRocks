@@ -218,7 +218,22 @@ function result_calc() {
 			dataType: 'json',
 			data: __result,
 			success: function ( data ){
-				
+				if (data.error) {
+
+				} else {
+					var message = '';
+
+					if (typeof data.message == 'string') {
+						message = data.message;
+					} else 
+
+					if (typeof data.message == 'object') {
+						for ( var __i in data.message) {
+							message += data.message[__i];
+						}
+					}
+					alert(message);
+				}
 			},
 			error : function ( data ) {
 				console.log('Error AJAX: result.php');
