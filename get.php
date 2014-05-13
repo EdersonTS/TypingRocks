@@ -10,7 +10,7 @@ $palavras = array(
   'imagem' => array()  // texto modo imagem pará usuário
 );
 
-for ($__i = 0; $__i < 30; $__i++) {
+for ($__i = 0; $__i < 200; $__i++) {
   // escolhe uma palavra do dicionário disponível
   $__palavra  = $__PALAVRAS__[rand(0, $__TOTAL__)];
 
