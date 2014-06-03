@@ -46,6 +46,7 @@ foreach ( $sessao as $word ) {
 
 	$contador++;
 }
+
 $input['input_typed'] = trim($input['input_typed']);
 $frase_sessao = trim($frase_sessao);
 

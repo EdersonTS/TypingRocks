@@ -8,6 +8,8 @@ var palavras    = [];
 var is_loading  = false;
 var is_typing   = false;
 
+var request_opened = 0;
+
 var time_to_end = 60;
 var counter     = {
 	backspace : 0,
@@ -31,15 +33,13 @@ digitar.keyup(function(event) {
 	var _this = this, $_this = $(this);
 
 	if ( is_loading ) {
-		event.preventDefault();
-
 		// disable
 		// this.disabled = true;
 
 		// clean typing area
 		clean(this);
 
-		return;
+		event.preventDefault();
 	}
 
 	typing_start();
@@ -81,6 +81,20 @@ digitar.keyup(function(event) {
 			error : function (data) {
 				console.log('Error AJAX: check.php');
 				console.log(data);
+			},
+			start : function () {
+				// incrementa requests abertos
+				request_opened++;
+			},
+			always : function () {
+				// decrementa requests abertos
+				request_opened--;
+
+				// chama função que calcula resultados
+				// apos o fechamento dos requests
+				if ( is_loading ) {
+					result_calc();
+				}
 			}
 		});
 
@@ -204,44 +218,46 @@ function typing_decrease_time() {
 
 function result_calc() {
 	if ( ! is_loading ) {
-
 		is_loading = true;
-
-		var __result = array_merge(counter, result);
-
-		clear_words();
-
-		$.ajax({
-			type: 'POST',
-			url: 'result.php',
-			cache: false,
-			dataType: 'json',
-			data: __result,
-			success: function ( data ){
-				if (data.error) {
-
-				} else {
-					var message = '';
-
-					if (typeof data.message == 'string') {
-						message = data.message;
-					} else 
-
-					if (typeof data.message == 'object') {
-						for ( var __i in data.message) {
-							message += data.message[__i];
-						}
-					}
-					alert(message);
-				}
-			},
-			error : function ( data ) {
-				console.log('Error AJAX: result.php');
-				console.log(data);
-			}
-		});
-
 	}
+
+	if ( request_opened > 0 ) {
+		return;
+	}
+
+	var __result = array_merge(counter, result);
+
+	clear_words();
+
+	$.ajax({
+		type: 'POST',
+		url: 'result.php',
+		cache: false,
+		dataType: 'json',
+		data: __result,
+		success: function ( data ){
+			if (data.error) {
+
+			} else {
+				var message = '';
+
+				if (typeof data.message == 'string') {
+					message = data.message;
+				} else 
+
+				if (typeof data.message == 'object') {
+					for ( var __i in data.message) {
+						message += data.message[__i];
+					}
+				}
+				alert(message);
+			}
+		},
+		error : function ( data ) {
+			console.log('Error AJAX: result.php');
+			console.log(data);
+		}
+	});
 }
 
 function monta_frase(__SERVER__) {
