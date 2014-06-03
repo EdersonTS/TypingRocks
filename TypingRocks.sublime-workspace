@@ -1,0 +1,1027 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mon",
+				"money_format"
+			],
+			[
+				"fputs",
+				"fputs"
+			],
+			[
+				"array_keys",
+				"array_key_exists"
+			],
+			[
+				"fput",
+				"fputs"
+			],
+			[
+				"mb_convert",
+				"mb_convert_encoding"
+			],
+			[
+				"mb_",
+				"mb_convert_encoding"
+			],
+			[
+				"html",
+				"html_entity_decode"
+			],
+			[
+				"in_arra",
+				"in_array"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 163.0,
+		"selected_items":
+		[
+			[
+				"git comm",
+				"Git: Quick Commit"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"git pu",
+				"Git: Push"
+			],
+			[
+				"comm",
+				"Git: Quick Commit"
+			],
+			[
+				"git commi",
+				"Git: Amend Commit"
+			],
+			[
+				"comim",
+				"Git: Commit"
+			],
+			[
+				"git sat",
+				"Git: Status"
+			],
+			[
+				"commi",
+				"Git: Commit"
+			],
+			[
+				"git statu",
+				"Git: Status"
+			],
+			[
+				"gti op",
+				"Git: Open Modified Files"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git stau",
+				"Git: Status"
+			],
+			[
+				"tra",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"file",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"toglta",
+				"View: Toggle Tabs"
+			],
+			[
+				"trai",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"git",
+				"Set Syntax: SublimeGit Status"
+			],
+			[
+				"trail",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"traili",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"uri",
+				"Hasher: URI Component Decode"
+			],
+			[
+				"decode",
+				"Hasher: URI Component Decode"
+			],
+			[
+				"deo",
+				"Hasher: HTML Entity Decode"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"tri",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"trili",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"java",
+				"Set Syntax: Java"
+			],
+			[
+				"tran",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"fod",
+				"Code Folding: Unfold All"
+			],
+			[
+				"ofl",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"tag",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"open",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reindent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"lines",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"REI",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"low",
+				"Convert Case: Lower Case"
+			],
+			[
+				"tria",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"reide",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"to tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"reid",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"base",
+				"Hasher: Base64 Decode"
+			],
+			[
+				"sor",
+				"Sort Lines"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"SQL",
+				"Set Syntax: SQL"
+			],
+			[
+				"con",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"deco",
+				"Hasher: HTML Entity Decode"
+			],
+			[
+				"toggle t",
+				"View: Toggle Tabs"
+			],
+			[
+				"to ta",
+				"View: Toggle Tabs"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"reiden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rei	",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"javs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"reide	",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"i",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"idente",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"ad",
+				"Project: Add Folder"
+			],
+			[
+				"ad fo",
+				"Project: Add Folder"
+			],
+			[
+				"projet",
+				"Project: Add Folder"
+			],
+			[
+				"status",
+				"View: Toggle Status Bar"
+			],
+			[
+				"idne",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"tabs",
+				"View: Toggle Tabs"
+			],
+			[
+				"staus",
+				"View: Toggle Status Bar"
+			],
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
+			[
+				"toggle",
+				"View: Toggle Menu"
+			],
+			[
+				"toggle m",
+				"View: Toggle Menu"
+			],
+			[
+				"lisp",
+				"Set Syntax: Lisp"
+			],
+			[
+				"trans",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"action",
+				"Set Syntax: ActionScript"
+			],
+			[
+				"base64",
+				"Hasher: Base64 Decode"
+			],
+			[
+				"conv",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"conver",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"to t",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"to spa",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"convt",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"cont",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"conve",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"view:",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"line",
+				"Sort Lines"
+			],
+			[
+				"train",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"indenta",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"enti",
+				"Hasher: HTML Entity Encode All"
+			],
+			[
+				"lore",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"lorim",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"view: ",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"toggl",
+				"View: Toggle Tabs"
+			],
+			[
+				"entit",
+				"Hasher: HTML Entity Encode All"
+			],
+			[
+				"en",
+				"Hasher: HTML Entity Encode"
+			],
+			[
+				"encode",
+				"Hasher: HTML Entity Encode"
+			],
+			[
+				"",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"trailin",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"spaces",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"forea",
+				"Snippet: <?php foreach (…) … <?php endforeach ?>"
+			],
+			[
+				"HTML",
+				"Hasher: HTML Entity Encode All"
+			],
+			[
+				"URI",
+				"Hasher: URI Component Encode"
+			],
+			[
+				"enco",
+				"Hasher: URI Encode"
+			],
+			[
+				"ha",
+				"Hasher: MD5"
+			]
+		],
+		"width": 462.0
+	},
+	"console":
+	{
+		"height": 684.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/TypingRocks/result.php",
+		"/var/www/TypingRocks/libs/js/script.js",
+		"/var/www/TypingRocks/funcoes.php",
+		"/var/www/TypingRocks/get.php",
+		"/var/www/TypingRocks/TypingRocks.sublime-workspace",
+		"/var/www/TypingRocks/TypingRocks.sublime-project",
+		"/var/www/TypingRocks/check.php",
+		"/home/byll/.local/share/gnome-shell/extensions/RemovePanelAppMenu@evotex.ch/extension.js",
+		"/home/byll/.local/share/gnome-shell/extensions/remove-activities-button@missoft.fr/extension.js",
+		"/usr/share/gnome-panel/4.0/applets/org.gnome.applets.AccessxStatusApplet.panel-applet",
+		"/home/byll/.local/share/themes/Ambiance/gtk-3.0/settings.ini",
+		"/home/byll/.local/share/themes/Ambiance/index.theme",
+		"/home/byll/.local/share/themes/Ambiance/gtk-3.0/gtk.css",
+		"/home/byll/.local/share/themes/Adwaita/gtk-3.0/gtk.css",
+		"/home/byll/.local/share/themes/Adwaita/gtk-3.0/settings.ini",
+		"/home/byll/.local/share/gnome-shell/extensions/pixel-saver@deadalnix.me/extension.js",
+		"/home/byll/.local/share/gnome-shell/extensions/pixel-saver@deadalnix.me/util.js",
+		"/home/byll/.local/share/gnome-shell/extensions/pixel-saver@deadalnix.me/buttons.js",
+		"/home/byll/.local/share/gnome-shell/extensions/traytop@polof.github.com/extension.js",
+		"/home/byll/.local/share/gnome-shell/extensions/pixel-saver@deadalnix.me/decoration.js",
+		"/home/byll/.local/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/prefs.js",
+		"/home/byll/.local/share/gnome-shell/extensions/pixel-saver@deadalnix.me/app_menu.js",
+		"/media/_édEr 02/Programas/Utilitários Plataformas/Java Linux/update-java-0.5b",
+		"/home/byll/Dropbox/Programs/FreeRapid/frd.sh",
+		"/boot/grub/grub.cfg",
+		"/media/SliTaz/boot/extlinux/isolinux.cfg",
+		"/home/byll/.gvfs/slitaz-cooking.iso/boot/isolinux/isolinux.cfg",
+		"/media/Sistema/boot/grub/grub.cfg",
+		"/var/www/TypingRocks/index.html",
+		"/media/SliTaz_/boot/grub/menu.lst",
+		"/media/SliTaz/boot/grub/menu.lst",
+		"/media/Sistemas/boot/grub/grub.cfg",
+		"/var/www/TypingRocks/palavras.php",
+		"/var/www/TypingRocks/teste.php",
+		"/var/www/TypingRocks/libs/css/style.css",
+		"/var/www/TypingRocks/libs/js/10FF-speedtest.js",
+		"/home/byll/Vídeos/The.Little.Rascals.1994.XviD.DvdRip/The.Little.Rascals.1994.XviD.DvdRip.Português.srt",
+		"/home/byll/Vídeos/The.Little.Rascals.1994.XviD.DvdRip/The.Little.Rascals.Save.the.Day.2014.1080p.BluRay.x264-G3LHD.srt",
+		"/usr/share/unity/lenses/applications/applications.lens",
+		"/var/www/TypingRocks/html.php",
+		"/home/eder-byll/Dropbox/Configs/.config/sublime-text/Local/Session.sublime_session",
+		"/home/eder-byll/Servidor/Projetos/fhste.com.br/site/views/_padrao.php",
+		"/tmp/fz3temp-1/trabalhe_conosco.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/controllers/home.php",
+		"/home/eder-byll/Servidor/Projetos/byll.com.br/index.php",
+		"/home/eder-byll/Servidor/Projetos/byll.com.br/painel/core/_Controller.php",
+		"/home/eder-byll/Servidor/Projetos/byll.com.br/painel/views/admin.php",
+		"/home/eder-byll/Servidor/Projetos/byll.com.br/painel/config/config.php",
+		"/home/eder-byll/Servidor/Projetos/byll.com.br/painel/config/constants.php",
+		"/home/eder-byll/GitHub/linhas/linux-tricks.txt",
+		"/home/eder-byll/Servidor/Projetos/oficialhost.com.br/site/views/_padrao.php",
+		"/home/eder-byll/Servidor/Projetos/oficialhost.com.br/site/core/BW_Controller.php",
+		"/home/eder-byll/Servidor/Projetos/oficialhost.com.br/libs/css/estrutura.css",
+		"/home/eder-byll/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/eder-byll/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/eder-byll/.cinnamon/panel-launchers/cinnamon-custom-launcher-1.desktop",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/controllers/produtos.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/controllers/pecas.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/controllers/noticias.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/core/BW_Functions.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/controllers/fale_conosco.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/controllers/classes.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/controllers/catalogos.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/controllers/assistencia_tecnica.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/controllers/galeria.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/config/routes.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/core/BW_Controller.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/controllers/assinatura.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/controllers/representantes.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/controllers/servicos.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/controllers/sobre_a_triel_ht.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/controllers/trabalhe_conosco.bk.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/controllers/trabalhe_conosco.php",
+		"/home/eder-byll/Downloads/Delivery report.dat",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/configuracao.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/banner.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/assistencia.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/assis_estado.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/assinatura_email.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/assinatura_config.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/video.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/servico.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/segmento.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/contato.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/departamento.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/galeria.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/mapa.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/noticia.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/produto.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/repre_estado.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/controllers/site_controllers/representante.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/core/_Model.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/painel/core/_Controller.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/core/BW_Functions_Gallery.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/libs/implementos-rodoviarios/css/conteudo.css",
+		"/home/eder-byll/Servidor/Projetos/bellapiscina.com.br/site/controllers/contato.php",
+		"/home/eder-byll/Servidor/Projetos/bellapiscina.com.br/site/controllers/faleconosco.php",
+		"/usr/share/cinnamon/js/misc/fileUtils.js",
+		"/usr/share/cinnamon/js/ui/placesManager.js",
+		"/usr/share/cinnamon/applications/defaults.list",
+		"/usr/share/applications/caja.desktop",
+		"/usr/share/applications/nemo.desktop",
+		"/home/eder-byll/.local/share/applications/mimeapps.list",
+		"/home/eder-byll/.local/share/applications/mimeinfo.cache",
+		"/home/eder-byll/.local/share/session_migration-cinnamon",
+		"/home/eder-byll/.local/share/mime/mime.cache",
+		"/home/eder-byll/.local/share/mime/globs2",
+		"/home/eder-byll/.local/share/gnome-settings-daemon/input-sources-converted",
+		"/home/eder-byll/.local/share/cinnamon/application_state",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/assinatura.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/email.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/estados.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/formulario.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/formulario-gerador.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/fotos.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/galeria.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/loader.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/mapa.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/noticia.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/noticias.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/portal.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/sobre.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/usitec/_padrao.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/libs/usitec/css/conteudo.css",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/logistica-agroindustrial/_offline.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/logistica-agroindustrial/home.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/logistica-agroindustrial/formulario-gerador.php",
+		"/home/eder-byll/Servidor/Projetos/trielht.com.br/site/views/usitec/servico.php"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 166.0,
+		"where_history":
+		[
+			"<open files>",
+			"/usr/share/cinnamon/js",
+			"",
+			"/home/eder-byll/.purple/logs/irc/_eder@irc.freenode.net/#oesc-livre.chat",
+			"",
+			"/home/eder-byll/Downloads/cloud.byll.com.br/",
+			"/home/eder-byll/Downloads/cloud.byll.com.br/lib",
+			"/home/eder-byll/Servidor/Projetos/telemedicinamorsch.com.br/extranet/protected",
+			"/home/eder-byll/Servidor/Projetos/justees.com.br/",
+			"/home/eder-byll/Servidor/Projetos/justees.com.br/catalog/view/theme/justees/template",
+			"/home/eder-byll/Servidor/Projetos/imovelbrasileiro.com.br/admin/templates_c",
+			"<open folders>",
+			"",
+			"/home/eder-byll/Downloads/stationery/stationery-0.8.0-tb.xpi_FILES/chrome/content",
+			"/home/eder-byll/Servidor/Projetos/cdljoinville.com.br/libs/admin/js",
+			"<open folders>",
+			"<open files>",
+			"/home/eder-byll/Servidor/Projetos/cdljoinville.com.br/site/controllers",
+			"<open files>",
+			"/home/eder-byll/Downloads/roundcube/",
+			"<open files>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"end",
+			"buttons",
+			"&",
+			"menuD",
+			"Dat",
+			"setHideTitlebar",
+			"win.title",
+			"title",
+			"height",
+			"$name",
+			".char",
+			"char",
+			".char",
+			"char",
+			"counter.",
+			"console.log",
+			"input_typed",
+			"^ ",
+			"home",
+			"initrd",
+			"frase",
+			"result",
+			"monta_frase",
+			"__SER",
+			"__SERER",
+			"__",
+			"total",
+			"counter ",
+			"counter",
+			"result",
+			"console.log",
+			"clea",
+			"typing_start",
+			"time_",
+			"time_start",
+			" == 0",
+			"palavra",
+			"user_input_stream",
+			"start",
+			"frase",
+			"mark_next_word",
+			"previous_position_top",
+			"row_",
+			"countdown",
+			"start_countdown",
+			"TYPIN",
+			"set",
+			"Prevent",
+			"PreventDefault",
+			"count",
+			"loading",
+			"shift",
+			"index",
+			"social",
+			"set_teste",
+			"departamento",
+			"array('type' => 'multi-check-json', 'op' => $this->getDados('segmento'))),",
+			"nemo",
+			"inode/directory",
+			"faixaver",
+			"teste",
+			"HIDDEN_WINDOW",
+			"getWindowsForBinding",
+			"_window",
+			"Window",
+			"_updateList",
+			"add",
+			"_onTray",
+			"this._insertStatusItem(box, -1);",
+			"panel_height",
+			"setPanelHeight",
+			"_panelHeight",
+			"_applet_icon",
+			"ratio_fill",
+			"image_ratio_fill",
+			"todos_produtos",
+			"pagina",
+			"barra-fotos",
+			"require",
+			"include",
+			"local",
+			"LOCAL",
+			"local",
+			"noticias",
+			"tabela",
+			"multi-check-json",
+			"JSON",
+			"print_(",
+			"url",
+			"multi-check",
+			"/imgs/imgs",
+			"libs/",
+			" class=\"bloco saiba_menu\"",
+			"men_desc",
+			"<?php echo $config->libs; ?>/imgs/",
+			"libs/",
+			"..",
+			"\\t.+",
+			".noticia {",
+			"categoria",
+			"fanc",
+			", array('class' => 'link_noticia')",
+			"        .informacao .eventos .evento img {",
+			"$this->dados['videos']",
+			" _has_operator",
+			"_has_operator",
+			"GET(",
+			"modal",
+			"</td>",
+			"span> <small",
+			"span",
+			"30px",
+			"120px",
+			"busca",
+			"  {",
+			"{",
+			"  {",
+			"{",
+			"titulo_pag",
+			"md5sum",
+			"spam",
+			"junk",
+			"folders",
+			"trayIcon",
+			"segmentos",
+			"portal",
+			"url",
+			"são lu"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"&\n",
+			"\\t",
+			"array('type' => 'multi-check-json', 'op' => $this->getSegmentos())),",
+			"/imgs",
+			"<?php echo $config->libs , '/' , $config->pasta; ?>/imgs/",
+			"",
+			"<?php echo $config->libs , '/' , $config->pasta; ?>/imgs/",
+			"<?php echo $config->libs; ?>/",
+			".",
+			"",
+			"</b></td>",
+			"span> <b><small",
+			"b",
+			"40px",
+			"85px",
+			" {",
+			"\"<?php echo $config->libs , '/' , $config->pasta; ?>/",
+			"\"<?php echo $config->libs; ?>/",
+			"videos",
+			"$config->libs , '/' , $config->pasta; ?>/imgs/",
+			"../",
+			"../../",
+			"",
+			".segmentos",
+			"%;",
+			"width:",
+			"",
+			"'hidden' => TRUE,",
+			"'hidden' => true",
+			"'hidden' => true, ",
+			"'hidden' => true",
+			"",
+			") {",
+			"",
+			"<\\1\\2\\3>",
+			"-",
+			"",
+			"var",
+			"'type'",
+			"",
+			" /",
+			"",
+			"div",
+			"<div><b>",
+			"",
+			"jar",
+			"jar href=\"http://www.emissornfe.fazenda.sp.gov.br/v2/aplicativo/",
+			"\n\n$1\n\n",
+			"\n\n\\1\n\n",
+			"	",
+			";\n	",
+			"\n}",
+			"}\n",
+			" {\n		",
+			"}\n",
+			"('",
+			"'),",
+			"',\\t'",
+			"'\\t'",
+			"",
+			" class=\"label_icone_estado\" fill=\"#FFFFFF\" style=\"font-size:11px\"",
+			" class=\"icone_estado\" fill=\"#9A0910\"",
+			"class=\"estado\" fill=\"#ED1C24\" ",
+			"x=\"380\"",
+			"}\n",
+			">\n<",
+			"",
+			",\n{",
+			"{\n",
+			"}\n",
+			">\n<",
+			"{\n",
+			";\n",
+			"}\n",
+			")\n}",
+			";\n",
+			"{\n",
+			"}\n",
+			">\n<",
+			"",
+			"label_icone_estado",
+			"icone_estado",
+			"estado",
+			"<desc>",
+			"}\n",
+			">\n<",
+			"{",
+			"'../resources",
+			"<?php echo ",
+			"Não",
+			"Locação",
+			"Falha na execução",
+			"noticia",
+			"foto",
+			"noticia",
+			"repre_",
+			"#paginacao-bar",
+			".banners",
+			".cabecalho .faixa-principal .menu-principal",
+			"imgs/fancybox/",
+			"url('../imgs/\\1.\\2')",
+			"url('../imgs/\\1')",
+			"z-index: 3;",
+			"noticia",
+			"'Novos'",
+			"libs",
+			"libs/",
+			"$this->start",
+			"$this->uri->",
+			"'",
+			"$this->idioma . '/'",
+			"\\t",
+			"<b>Benefícios:</b>",
+			"Benefícios:",
+			"",
+			"<b>Benefícios:</b>",
+			"<b>Benefícios:</span>",
+			"",
+			":</span>",
+			">\n<",
+			"",
+			"<br/>",
+			"",
+			"\"<?php echo $config->libs; ?>/",
+			"\"<?php echo $config->uploads; ?>/",
+			"\"<?php echo $config->libs; ?>/",
+			"</p>\n<p>",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 94.0
+	},
+	"project": "TypingRocks.sublime-project",
+	"replace":
+	{
+		"height": 82.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": false,
+	"side_bar_visible": true,
+	"side_bar_width": 211.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
