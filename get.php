@@ -24,19 +24,19 @@ for ($__i = 0; $__i < 200; $__i++) {
   $palavras['imagem'][] = 'data:image/png;base64,' . base64_encode(gerarImagens($__palavra));
 }
 
-session_start();
-$_SESSION['palavras'] = array_combine($palavras['chaves'], $palavras['texto']);
-session_commit();
-
-// $__palavras = array();
-// '__CHAVES__'   = $palavras['chaves'];
-// '__PALAVRAS__' = $palavras['imagem'];
-// '__TOTAL__'    = count($palavras['imagem']);
-
-echo json_encode(
+$result = json_encode(
 	array(
 		'chaves'   => $palavras['chaves'],
 		'palavras' => $palavras['imagem'],
 		'total'    => count($palavras['imagem']),
 	)
 );
+
+$__chaves = $palavras['chaves'];
+$__texto  = $palavras['texto'];
+
+session_start();
+$_SESSION['palavras'] = array_combine($__chaves, $__texto);
+session_commit();
+
+echo $result;
